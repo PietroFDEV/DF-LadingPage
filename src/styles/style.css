@@ -1,0 +1,19 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .primary {
+    color: #FFD700;
+  }
+
+  .bg-primary {
+    background-color: #FFD700;
+  }
+
+  .hover\:bg-primary:hover {
+    background-color: #FFD700;
+  }
+
+  .hover\:text-primary:hover {
+    color: #FFD700;
+  }

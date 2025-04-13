@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DF Dance Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <script src="https://kit.fontawesome.com/a2e0f1f0d0.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-black">
+  <!-- Header -->
+  <header class="relative font-sans">
+    <!-- Navbar -->
+    <nav
+      class="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50 ">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-white">
+        <!-- Logo -->
+        <img src="/src/images/logo2.png" alt="Logo" class="h-12 md:h-14 object-contain">
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 uppercase text-sm font-semibold tracking-wide">
+          <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#equipe" class="hover:text-yellow-400 transition">Nossa Equipe</a></li>
+          <li><a href="#uniformes" class="hover:text-yellow-400 transition">Uniformes</a></li>
+          <li><a href="#aulas" class="hover:text-yellow-400 transition">Aulas</a></li>
+          <li><a href="#companhia" class="hover:text-yellow-400 transition">A Companhia</a></li>
+          <li><a href="#quemsomos" class="hover:text-yellow-400 transition">Quem Somos</a></li>
+          <li><a href="#contato" class="hover:text-yellow-400 transition">Contato</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none" id="menuToggle">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="md:hidden hidden flex-col bg-black/90 text-white px-6 py-4 space-y-4" id="mobileMenu">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#equipe" class="hover:text-yellow-400">Nossa Equipe</a>
+        <a href="#uniformes" class="hover:text-yellow-400">Uniformes</a>
+        <a href="#aulas" class="hover:text-yellow-400">Aulas</a>
+        <a href="#companhia" class="hover:text-yellow-400">A Companhia</a>
+        <a href="#quemsomos" class="hover:text-yellow-400">Quem Somos</a>
+        <a href="#contato" class="hover:text-yellow-400">Contato</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="h-screen w-full bg-cover bg-center flex items-center justify-center text-center px-4"
+      style="background-image: url('/src/images/df_building.jpg');">
+      <div class="bg-black bg-opacity-50 p-6 md:p-10 rounded-xl max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+          Companhia de Dança<br>
+          <span class="text-yellow-400">Desirre Favoreto</span>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-black text-yellow-400 py-20 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
+
+      <!-- Logo Left -->
+      <div class="flex-shrink-0">
+        <img src="/src/images/logo.jpg" alt="Logo" class="h-28 md:h-36 object-contain drop-shadow-lg">
+      </div>
+
+      <!-- Text Right -->
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
+          Comphania Desirre Favoreto
+        </h2>
+        <p class="text-base md:text-lg text-white/80 max-w-xl">
+          Transformando paixão em movimento. Competições, conquistas e muito talento.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white text-black max-w-5xl mx-auto px-4">
+    <h3 class="text-3xl font-bold mb-6 text-center">QUEM SOMOS</h3>
+    <p class="text-lg leading-relaxed">
+      Somos uma companhia de dança com um grupo de dançarinos e pessoal associado que trabalham juntos para realizar
+      danças como um espetáculo ou entretenimento. Trabalhamos com diferentes estilos de dança na produção de arte.
+      <br />
+      <br />
+      Aqui transformamos vidas para melhor e produzimos talentos até onde não existem. Trazemos um olhar interior,
+      autoconhecimento e valorizamos a superação, assiduidade, participação, frequência, disciplina e acima de tudo o
+      respeito e a fé.
+    </p>
+  </section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-black text-black">
+  <div class="max-w-5xl mx-auto px-4">
+    <h3 class="text-4xl font-bold mb-12 text-center text-black uppercase tracking-wide">Galeria de Fotos</h3>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img1.jpg" alt="Foto 1" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img2.jpg" alt="Foto 2" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img3.jpg" alt="Troféu" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img4.jpg" alt="Troféu" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img5.jpg" alt="Troféu" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="/src/images/img6.jpg" alt="Troféu" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Team Section -->
+  <section id="team" class="py-20 bg-yellow-300 text-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- <h2 class="text-4xl font-extrabold text-center mb-12">Nossa Equipe</h2> -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Team Member -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+          <img src="/src/images/ket.png" alt="Ketherin"
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+          <h4 class="text-xl font-semibold mb-2">Ketherin Goudel Favoreto</h4>
+          <p class="text-gray-700 text-sm">Conhecida como filha da Professora Desirre, é Social Media da companhia,
+            formada pela Universidade Positivo. Está presente no mundo da dança há mais de 10 anos, especialmente nas
+            danças urbanas. Participou de festivais como FIH2, HHI e Joinville.</p>
+        </div>
+
+        <!-- Team Member -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+          <img src="/src/images/desi.png" alt="Desirre"
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+          <h4 class="text-xl font-semibold mb-2">Desirre Goudel Favoreto</h4>
+          <p class="text-gray-700 text-sm">Dança há 31 anos, atua há 28 e, há 21 anos, é coreógrafa e professora.
+            Criadora de uma metodologia própria, formada em Educação Física (UFPR), pós-graduada em dança (ISEPE), MBA
+            em gestão de espetáculos. Jurada oficial do HHIB e diretora da companhia em Pinhais.</p>
+        </div>
+
+        <!-- Team Member -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+          <img src="/src/images/luiz.png" alt="Luiz"
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+          <h4 class="text-xl font-semibold mb-2">Luiz Hauth</h4>
+          <p class="text-gray-700 text-sm">Dança há 10 anos com foco em danças urbanas. Participou de grupos como Street
+            Extreme, competiu em festivais como FIH2 e Joinville, e estudou fora com grandes nomes. Licenciado em
+            Educação Física (Unibrasil), hoje integra o Epifania Dance Project de Guiga de Souza.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Schedule Section -->
+  <section class="bg-black text-white py-16 px-4" id="schedule">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-2 tracking-wider">AULAS</h2>
+      <p class="text-6xl font-black text-white relative inline-block mb-12">
+        Grade <span class="text-yellow-400 absolute text-2xl -bottom-3 left-1/2 -translate-x-1/2">2025</span>
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+        <!-- Segunda -->
+        <div>
+          <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Segunda</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="uppercase text-sm font-semibold">Ballet Infantil</p>
+              <p class="text-sm">19:00 - 20:00 | 4 a 10 anos | Desi</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Mulheres Dançam</p>
+              <p class="text-sm">20:15 - 20:45 | 20+ | Desi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terça -->
+        <div>
+          <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Terça</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="uppercase text-sm font-semibold">(Gamers) Hip Hop Junior</p>
+              <p class="text-sm">18:30 - 20:00 | 10 a 14 anos | Desi</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">(Genesis) Hip Hop Sênior</p>
+              <p class="text-sm">19:30 - 21:00 | 14+ | Luiz</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Jazz</p>
+              <p class="text-sm">20:00 - 21:00 | 9+ | Desi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarta -->
+        <div>
+          <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Quarta</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="uppercase text-sm font-semibold">Habilidade Infantil</p>
+              <p class="text-sm">19:00 - 20:00 | 3 a 10 anos | Desi</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">(Lollipop) Hip Hop Infantil</p>
+              <p class="text-sm">19:00 - 20:30 | 4 a 10 anos | Desi</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">(Gamers) Hip Hop Junior</p>
+              <p class="text-sm">18:30 - 20:00 | 10 a 14 anos | Desi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quinta -->
+        <div>
+          <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Quinta</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="uppercase text-sm font-semibold">Dança do Ventre</p>
+              <p class="text-sm">18:30 - 19:30 | 12+ | Vanessa</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">(Genesis) Hip Hop Sênior</p>
+              <p class="text-sm">19:30 - 21:00 | 14+ | Luiz</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Jazz</p>
+              <p class="text-sm">20:00 - 21:00 | 9+ | Desi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-white text-black">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-6">Contato</h3>
+    <div class="flex justify-center space-x-8">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/41984423416" target="_blank" class="hover:scale-110 transition-transform duration-300">
+        <img src="/src/images/whatsapp.png" alt="WhatsApp" class="w-10 h-10">
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/cia.df" target="_blank" class="hover:scale-110 transition-transform duration-300">
+        <img src="/src/images/instagram.png" alt="Instagram" class="w-10 h-10">
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/ciadesirrefavoreto?locale=pt_BR" target="_blank" class="hover:scale-110 transition-transform duration-300">
+        <img src="/src/images/facebook.png" alt="Facebook" class="w-10 h-10">
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@cia.df" target="_blank" class="hover:scale-110 transition-transform duration-300">
+        <img src="/src/images/tiktok.png" alt="TikTok" class="w-10 h-10">
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4">
+    <p class="text-sm">&copy; 2025 Comphania de dança DF. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+</html>
