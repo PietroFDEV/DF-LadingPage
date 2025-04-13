@@ -1,19 +1,44 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@font-face {
+  font-family: 'Agrandir Grand Heavy';
+  src: url(../fonts/agrandir-grand-heavy.otf) format('opentype');
+}
+
+h1 {
+  font-family: 'Agrandir Grand Heavy';
+}
+
+.primary {
+  color: #FFD700;
+}
+
+.bg-primary {
+  background-color: #FFD700;
+}
+
+.hover\:bg-primary:hover {
+  background-color: #FFD700;
+}
+
+.hover\:text-primary:hover {
+  color: #FFD700;
+}
+
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 0, 0.8));
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
   }
 
-  .primary {
-    color: #FFD700;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  .bg-primary {
-    background-color: #FFD700;
-  }
-
-  .hover\:bg-primary:hover {
-    background-color: #FFD700;
-  }
-
-  .hover\:text-primary:hover {
-    color: #FFD700;
-  }
+.animate-fade-in-right {
+  animation: fade-in-right 1s ease-out forwards;
+}
