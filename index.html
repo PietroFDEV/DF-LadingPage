@@ -14,23 +14,21 @@
 <body class="bg-white text-black">
   <!-- Header -->
   <header class="relative font-sans">
-    <nav
-      class="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50 ">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-white">
-
-        <img src="./src/images/logo2.png" alt="Logo" class="h-12 md:h-14 object-contain" />
-
+    <nav class="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-white flex justify-center items-center">
         <ul class="hidden md:flex gap-6 uppercase text-sm font-semibold tracking-wide">
-          <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
-          <li><a href="#equipe" class="hover:text-yellow-400 transition">Nossa Equipe</a></li>
-          <li><a href="#uniformes" class="hover:text-yellow-400 transition">Uniformes</a></li>
-          <li><a href="#aulas" class="hover:text-yellow-400 transition">Aulas</a></li>
-          <li><a href="#companhia" class="hover:text-yellow-400 transition">A Companhia</a></li>
-          <li><a href="#quemsomos" class="hover:text-yellow-400 transition">Quem Somos</a></li>
-          <li><a href="#contato" class="hover:text-yellow-400 transition">Contato</a></li>
+          <li><a href="#home" onclick="goBack()" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#equipe" onclick="goBack()" class="hover:text-yellow-400 transition">Nossa Equipe</a></li>
+          <li><a href="#unforme" onclick="showUniformesSection()" class="hover:text-yellow-400 transition">Uniformes</a>
+          </li>
+          <li><a href="#aulas" onclick="goBack()" class="hover:text-yellow-400 transition">Aulas</a></li>
+          <li><a href="#companhia" onclick="goBack()" class="hover:text-yellow-400 transition">A Companhia</a></li>
+          <li><a href="#quemsomos" onclick="goBack()" class="hover:text-yellow-400 transition">Quem Somos</a></li>
+          <li><a href="#contato" onclick="goBack()" class="hover:text-yellow-400 transition">Contato</a></li>
         </ul>
 
-        <button class="md:hidden focus:outline-none" id="menuToggle">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none absolute right-6">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -38,20 +36,30 @@
       </div>
     </nav>
 
-    <div class="h-screen w-full bg-cover bg-center flex flex-col items-center justify-center text-center px-4 space-y-8" style="background-image: url('./src/images/img7.jpg');">
-      <div class="bg-black bg-opacity-50 p-6 md:p-10 rounded-xl max-w-3xl">
-        <h1 class="text-4xl md:text-4xl text-white leading-tight drop-shadow-lg"
-          style="font-family: 'Agrandir Grand Heavy'">
+  </header>
+
+  <section class="relative bg-black text-yellow-400">
+    <div class="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center px-6 py-20 text-center space-y-8"
+         style="background-image: url('./src/imagesKet/background.jpg');">
+      
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg"
+            style="font-family: 'Agrandir Grand Heavy'">
           Companhia de Dança<br>
           <span class="text-yellow-400">Desirre Favoreto</span>
         </h1>
       </div>
-
-      <a href="#contact" class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-full hover:bg-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
-        Quero Dançar!
-      </a>
+  
+      <img src="./src/imagesKet/logo.png" alt="Logo"
+           class="h-48 sm:h-60 md:h-72 lg:h-96 object-contain" />
+  
+           <a href="#contact"
+           class="gradient text-black font-bold px-6 py-3 rounded-full hover:from-orange-500 hover:to-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 flex items-center gap-3">
+           <img src="./src/images/dance.png" alt="dance" class="w-10 h-10" />
+           Quero Dançar!
+         </a>
     </div>
-  </header>
+  </section>  
 
   <section class="bg-black text-yellow-400 py-20 px-6">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
@@ -82,63 +90,22 @@
     </div>
   </section>
 
-  <section id="gallery" class="py-20 bg-black text-black">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-4xl font-bold mb-12 text-center text-white uppercase tracking-wide">Galeria de Fotos</h3>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img1.jpg" alt="Foto 1"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Foto 1</p>
-          </div>
-        </div>
-
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img2.jpg" alt="Foto 2"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Foto 2</p>
-          </div>
-        </div>
-
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img3.jpg" alt="Troféu"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Troféu</p>
-          </div>
-        </div>
-
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img4.jpg" alt="Troféu"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Troféu</p>
-          </div>
-        </div>
-
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img5.jpg" alt="Troféu"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Troféu</p>
-          </div>
-        </div>
-
-        <div class="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300">
-          <img src="./src/images/img6.jpg" alt="Troféu"
-            class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="text-white font-semibold text-sm">Troféu</p>
-          </div>
+  <section id="gallery" class="bg-black text-white">
+    <div>
+      <div class="relative w-full overflow-hidden rounded-2xl shadow-xl">
+        <div class="carousel-container relative w-full h-96 min-h-[384px]">
+          <img src="./src/imagesKet/IMG_6360.JPG" alt="Foto 1"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
+          <img src="./src/imagesKet/IMG_2671.JPG" alt="Foto 2"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
+          <img src="./src/imagesKet/IMG_9121.JPG" alt="Foto 3"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
+          <img src="./src/imagesKet/IMG_9238.JPG" alt="Foto 4"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
+          <img src="./src/imagesKet/IMG_6442.JPG" alt="Foto 5"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
+          <img src="./src/imagesKet/IMG_6443.JPG" alt="Foto 6"
+            class="absolute inset-0 w-full h-full object-cover object-center duration-1000" />
         </div>
       </div>
     </div>
@@ -188,17 +155,17 @@
         Grade <span class="text-yellow-400 absolute text-2xl -bottom-3 left-1/2 -translate-x-1/2">2025</span>
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-10 text-left">
         <div>
           <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Segunda</h3>
           <div class="space-y-4">
             <div>
-              <p class="uppercase text-sm font-semibold">Ballet Infantil</p>
-              <p class="text-sm">19:00 - 20:00 | 4 a 10 anos | Desi</p>
+              <p class="uppercase text-sm font-semibold">Ballet Baby</p>
+              <p class="text-sm">19:00 - 20:00 | 4 a 10 anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">Mulheres Dançam</p>
-              <p class="text-sm">20:15 - 20:45 | 20+ | Desi</p>
+              <p class="uppercase text-sm font-semibold">Hiphop Lolipop</p>
+              <p class="text-sm">19:45 - 20:30 | 4 a 10 anos</p>
             </div>
           </div>
         </div>
@@ -207,16 +174,20 @@
           <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Terça</h3>
           <div class="space-y-4">
             <div>
-              <p class="uppercase text-sm font-semibold">(Gamers) Hip Hop Junior</p>
-              <p class="text-sm">18:30 - 20:00 | 10 a 14 anos | Desi</p>
+              <p class="uppercase text-sm font-semibold">Hip Hop Genesis</p>
+              <p class="text-sm">15:30 - 17:30 | 13+ anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">(Genesis) Hip Hop Sênior</p>
-              <p class="text-sm">19:30 - 21:00 | 14+ | Luiz</p>
+              <p class="uppercase text-sm font-semibold">Jazz Sênior</p>
+              <p class="text-sm">17:30 - 18:15 | 13+ anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">Jazz</p>
-              <p class="text-sm">20:00 - 21:00 | 9+ | Desi</p>
+              <p class="uppercase text-sm font-semibold">Ballet Jazz Junior</p>
+              <p class="text-sm">18:30 - 19:15 | 9 a 13 anos</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Hip Hop Gamers</p>
+              <p class="text-sm">19:00 - 20:30 | 9 a 13 anos</p>
             </div>
           </div>
         </div>
@@ -225,16 +196,12 @@
           <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Quarta</h3>
           <div class="space-y-4">
             <div>
-              <p class="uppercase text-sm font-semibold">Habilidade Infantil</p>
-              <p class="text-sm">19:00 - 20:00 | 3 a 10 anos | Desi</p>
+              <p class="uppercase text-sm font-semibold">Ballet Baby</p>
+              <p class="text-sm">19:00 - 20:00 | 4 a 10 anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">(Lollipop) Hip Hop Infantil</p>
-              <p class="text-sm">19:00 - 20:30 | 4 a 10 anos | Desi</p>
-            </div>
-            <div>
-              <p class="uppercase text-sm font-semibold">(Gamers) Hip Hop Junior</p>
-              <p class="text-sm">18:30 - 20:00 | 10 a 14 anos | Desi</p>
+              <p class="uppercase text-sm font-semibold">Hiphop Lolipop</p>
+              <p class="text-sm">19:45 - 20:30 | 4 a 10 anos</p>
             </div>
           </div>
         </div>
@@ -243,16 +210,24 @@
           <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Quinta</h3>
           <div class="space-y-4">
             <div>
-              <p class="uppercase text-sm font-semibold">Dança do Ventre</p>
-              <p class="text-sm">18:30 - 19:30 | 12+ | Vanessa</p>
+              <p class="uppercase text-sm font-semibold">Hip Hop Genesis</p>
+              <p class="text-sm">15:30 - 17:30 | 13+ anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">(Genesis) Hip Hop Sênior</p>
-              <p class="text-sm">19:30 - 21:00 | 14+ | Luiz</p>
+              <p class="uppercase text-sm font-semibold">Jazz Sênior</p>
+              <p class="text-sm">17:30 - 18:15 | 13+ anos</p>
             </div>
             <div>
-              <p class="uppercase text-sm font-semibold">Jazz</p>
-              <p class="text-sm">20:00 - 21:00 | 9+ | Desi</p>
+              <p class="uppercase text-sm font-semibold">Dança do ventre</p>
+              <p class="text-sm">17:00 - 18:00 | 13+ anos</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Ballet Jazz Junior</p>
+              <p class="text-sm">18:30 - 19:15 | 9 a 13 anos</p>
+            </div>
+            <div>
+              <p class="uppercase text-sm font-semibold">Hip Hop Gamers</p>
+              <p class="text-sm">19:00 - 20:30 | 9 a 13 anos</p>
             </div>
           </div>
         </div>
@@ -308,9 +283,39 @@
           class="transition duration-300 transform hover:scale-125 hover:-rotate-3 group">
           <img src="./src/images/tiktok.png" alt="TikTok" class="w-10 h-10 group-hover:drop-shadow-glow" />
         </a>
+
+        <a href="https://www.youtube.com/@ciadf-desirrefavoreto7904" target="_blank"
+          class="transition duration-300 transform hover:scale-125 hover:-rotate-3 group">
+          <img src="./src/images/youtube.png" alt="Youtube" class="w-10 h-10 group-hover:drop-shadow-glow" />
+        </a>
       </div>
     </div>
   </section>
+
+  <section id="uniformesSection" class="hidden bg-black text-white min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 gap-10">
+    <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+      <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-wide relative inline-block">
+        UNIFORMES
+        <span class="block w-10 h-1 bg-yellow-400 mt-1 mx-auto md:mx-0"></span>
+      </h2>
+  
+      <div>
+        <h3 class="text-xl md:text-3xl font-semibold">RECANTO DAS NOVIDADES</h3>
+        <span class="block w-36 h-1 bg-yellow-400 my-2 mx-auto md:mx-0"></span>
+        <p class="text-sm md:text-base">R. Jerônimo Busato Filho, 84 - Vila Tarumã, Pinhais - PR</p>
+      </div>
+  
+      <button onclick="goBack()" class="text-yellow-400 underline text-sm mt-4">
+        Voltar
+      </button>
+    </div>
+  
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img src="./src/images/uniforme.png" alt="Uniformes"
+           class="rounded-lg shadow-xl max-w-xs sm:max-w-sm md:max-w-md w-full h-auto object-contain" />
+    </div>
+  </section>
+  
 
   <footer class="bg-black text-white text-center py-4">
     <p class="text-sm">&copy; 2025 Comphania de dança DF. Todos os direitos reservados.</p>
@@ -354,6 +359,46 @@
       status.className = "text-red-600 mt-4 font-bold";
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".carousel-container img");
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.opacity = i === index ? '1' : '0';
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+    setInterval(nextImage, 70000);
+  });
+
+  function showUniformesSection() {
+  document.querySelectorAll("body > section").forEach(section => {
+    if (section.id !== "uniformesSection") {
+      section.style.display = "none";
+    }
+  });
+
+  const uniformes = document.getElementById("uniformesSection");
+  if (uniformes) uniformes.classList.remove("hidden");
+}
+
+function goBack() {
+  document.querySelectorAll("body > section").forEach(section => {
+    if (section.id !== "uniformesSection") {
+      section.style.display = "";
+    }
+  });
+
+  document.getElementById("uniformesSection").classList.add("hidden");
+}
 </script>
 
 </html>
