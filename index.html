@@ -12,69 +12,93 @@
 </head>
 
 <body class="bg-white text-black">
-  <!-- Header -->
   <header class="relative font-sans">
     <nav class="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 text-white flex justify-center items-center">
-        <ul class="hidden md:flex gap-6 uppercase text-sm font-semibold tracking-wide">
-          <li><a href="#home" onclick="goBack()" class="hover:text-yellow-400 transition">Home</a></li>
-          <li><a href="#equipe" onclick="goBack()" class="hover:text-yellow-400 transition">Nossa Equipe</a></li>
-          <li><a href="#unforme" onclick="showUniformesSection()" class="hover:text-yellow-400 transition">Uniformes</a>
+      <div class="max-w-7xl mx-auto px-6 py-4 text-white flex justify-between items-center">
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6 uppercase text-sm font-semibold tracking-wide mx-auto">
+          <li><a href="#home" onclick="goBack('#home')" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#equipe" onclick="goBack('#equipe')" class="hover:text-yellow-400 transition">Nossa Equipe</a>
           </li>
-          <li><a href="#aulas" onclick="goBack()" class="hover:text-yellow-400 transition">Aulas</a></li>
-          <li><a href="#companhia" onclick="goBack()" class="hover:text-yellow-400 transition">A Companhia</a></li>
-          <li><a href="#quemsomos" onclick="goBack()" class="hover:text-yellow-400 transition">Quem Somos</a></li>
-          <li><a href="#contato" onclick="goBack()" class="hover:text-yellow-400 transition">Contato</a></li>
+          <li><a href="#uniformes" onclick="showUniformesSection()"
+              class="hover:text-yellow-400 transition">Uniformes</a></li>
+          <li><a href="#aulas" onclick="goBack('#aulas')" class="hover:text-yellow-400 transition">Aulas</a></li>
+          <li><a href="#quemsomos" onclick="goBack('#quemsomos')" class="hover:text-yellow-400 transition">Quem
+              Somos</a></li>
+          <li><a href="#contato" onclick="goBack('#contato')" class="hover:text-yellow-400 transition">Contato</a></li>
         </ul>
 
         <!-- Mobile Menu Button -->
-        <button class="md:hidden focus:outline-none absolute right-6">
+        <button id="mobileToggle" class="md:hidden focus:outline-none">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
-    </nav>
 
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu"
+        class="md:hidden hidden flex flex-col bg-black/90 text-white px-6 py-4 space-y-4 text-center">
+        <a href="#home" onclick="goBack('#home')" class="hover:text-yellow-400">Home</a>
+        <a href="#equipe" onclick="goBack('#equipe')" class="hover:text-yellow-400">Nossa Equipe</a>
+        <a href="#uniforme" onclick="showUniformesSection()" class="hover:text-yellow-400">Uniformes</a>
+        <a href="#aulas" onclick="goBack('#aulas')" class="hover:text-yellow-400">Aulas</a>
+        <a href="#quemsomos" onclick="goBack('#quemsomos')" class="hover:text-yellow-400">Quem Somos</a>
+        <a href="#contato" onclick="goBack('#contato')" class="hover:text-yellow-400">Contato</a>
+      </div>
+    </nav>
   </header>
 
-  <section class="relative bg-black text-yellow-400">
-    <div class="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center px-6 py-20 text-center space-y-8"
-         style="background-image: url('./src/imagesKet/background.jpg');">
-      
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg"
-            style="font-family: 'Agrandir Grand Heavy'">
-          Companhia de Dança<br>
-          <span class="text-yellow-400">Desirre Favoreto</span>
-        </h1>
+  <section id="home" class="relative bg-black text-yellow-400">
+    <div
+      class="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center px-6 py-20 text-center space-y-8"
+      style="background-image: url('./src/imagesKet/background.jpg');">
+
+      <div class="text-wrapper text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg"
+        style="font-family: 'Agrandir Grand Heavy'">
+        <p>Companhia de Dança</p>
+        <div class="text-yellow-400">Desirre Favoreto</div>
       </div>
-  
-      <img src="./src/imagesKet/logo.png" alt="Logo"
-           class="h-48 sm:h-60 md:h-72 lg:h-96 object-contain" />
-  
-           <a href="#contact"
-           class="gradient text-black font-bold px-6 py-3 rounded-full hover:from-orange-500 hover:to-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 flex items-center gap-3">
-           <img src="./src/images/dance.png" alt="dance" class="w-10 h-10" />
-           Quero Dançar!
-         </a>
+
+      <img src="./src/imagesKet/logo.png" alt="Logo" class="h-48 sm:h-60 md:h-72 lg:h-96 object-contain logo" />
+
+      <a href="#contact" id="danceButton" style="font-family: 'Agrandir Grand Heavy'"
+        class="gradient text-2xl text-black font-bold px-6 py-3 rounded-full hover:from-orange-500 hover:to-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 flex items-center gap-3">
+        <img src="./src/images/dance.png" alt="dance" class="w-10 h-10" />
+        Quero Dançar!
+      </a>
     </div>
-  </section>  
+  </section>
 
-  <section class="bg-black text-yellow-400 py-20 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-      <div class="flex-shrink-0 text-center md:text-left">
-        <img src="./src/images/logo.jpg" alt="Logo" class="h-28 md:h-36 object-contain drop-shadow-lg mb-6 md:mb-10">
-        <h2 class="text-3xl md:text-5xl font-extrabold">
-          Companhia<br class="hidden md:block"> Desirre Favoreto
-        </h2>
-        <p class="text-white/80 mt-4 max-w-sm mx-auto md:mx-0">
-          Transformando paixão em movimento. Competições, conquistas e muito talento.
-        </p>
+  <section id="quemsomos" class="bg-black text-yellow-400 py-20 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between gap-12">
+      <div id="introBox"
+        class="flex flex-1 items-center justify-center opacity-0 translate-y-8 transition-all duration-700 ease-out w-full md:w-1/2">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
+
+          <img src="./src/images/logo.jpg" alt="Logo" class="h-60 m-auto object-contain drop-shadow-xl rounded-2xl" />
+
+          <p class="text-white/80 text-lg md:text-xl max-w-md text-center md:text-left"
+            style="font-family: 'Agrandir Grand Heavy'">
+            Transformando paixão em
+            <br />
+            <span class="rotating-text mt-36">
+              <span>
+                <span class="word alizarin">Dança</span>
+                <span class="word wisteria">Aprendizado</span>
+                <span class="word peter-river">Movimento</span>
+                <span class="word emerald">Competição</span>
+                <span class="word wisteria">Conquistas</span>
+                <span class="word peter-river">Talento</span>
+              </span>
+            </span>
+          </p>
+
+        </div>
       </div>
 
-      <div
-        class="relative bg-white text-black rounded-3xl shadow-2xl p-8 md:p-10 max-w-xl w-full animate-fade-in-right">
+      <div id="aboutBox"
+        class="relative bg-white text-black rounded-3xl shadow-2xl p-8 md:p-10 max-w-xl w-full opacity-0 translate-x-10 transition-all duration-700 ease-out">
         <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">QUEM SOMOS</h3>
         <p class="text-base md:text-lg leading-relaxed">
           Somos uma companhia de dança com um grupo de dançarinos e pessoal associado que trabalham juntos para realizar
@@ -82,13 +106,12 @@
           <br /><br />
           Aqui transformamos vidas para melhor e produzimos talentos até onde não existem. Trazemos um olhar interior,
           autoconhecimento e valorizamos a superação, assiduidade, participação, frequência, disciplina e acima de tudo
-          o
-          respeito e a fé.
+          o respeito e a fé.
         </p>
       </div>
-
     </div>
   </section>
+
 
   <section id="gallery" class="bg-black text-white">
     <div>
@@ -111,13 +134,13 @@
     </div>
   </section>
 
-  <section id="team" class="py-20 bg-yellow-300 text-black">
+  <section id="equipe" class="py-20 bg-yellow-300 text-black">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div
           class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
           <img src="./src/images/ket.png" alt="Ketherin"
-            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md workers">
           <h4 class="text-xl font-semibold mb-2">Ketherin Goudel Favoreto</h4>
           <p class="text-gray-700 text-sm">Conhecida como filha da Professora Desirre, é Social Media da companhia,
             formada pela Universidade Positivo. Está presente no mundo da dança há mais de 10 anos, especialmente nas
@@ -127,7 +150,7 @@
         <div
           class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
           <img src="./src/images/desi.png" alt="Desirre"
-            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md workers">
           <h4 class="text-xl font-semibold mb-2">Desirre Goudel Favoreto</h4>
           <p class="text-gray-700 text-sm">Dança há 31 anos, atua há 28 e, há 21 anos, é coreógrafa e professora.
             Criadora de uma metodologia própria, formada em Educação Física (UFPR), pós-graduada em dança (ISEPE), MBA
@@ -137,7 +160,7 @@
         <div
           class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
           <img src="./src/images/luiz.png" alt="Luiz"
-            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+            class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md workers">
           <h4 class="text-xl font-semibold mb-2">Luiz Hauth</h4>
           <p class="text-gray-700 text-sm">Dança há 10 anos com foco em danças urbanas. Participou de grupos como Street
             Extreme, competiu em festivais como FIH2 e Joinville, e estudou fora com grandes nomes. Licenciado em
@@ -148,7 +171,7 @@
   </section>
 
 
-  <section class="bg-black text-white py-16 px-4" id="schedule">
+  <section class="bg-black text-white py-16 px-4" id="aulas">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-2 tracking-wider">AULAS</h2>
       <p class="text-6xl font-black text-white relative inline-block mb-12">
@@ -193,7 +216,7 @@
         </div>
 
         <div>
-          <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Quarta</h3>
+          <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Quarta</h3>
           <div class="space-y-4">
             <div>
               <p class="uppercase text-sm font-semibold">Ballet Baby</p>
@@ -207,7 +230,7 @@
         </div>
 
         <div>
-          <h3 class="text-2xl font-bold text-yellow-400 border-b border-yellow-400 pb-1 mb-4">Quinta</h3>
+          <h3 class="text-2xl font-bold border-b border-yellow-400 pb-1 mb-4">Quinta</h3>
           <div class="space-y-4">
             <div>
               <p class="uppercase text-sm font-semibold">Hip Hop Genesis</p>
@@ -235,11 +258,11 @@
     </div>
   </section>
 
-  <section id="contact" class="py-16 bg-white text-black">
+  <section id="contato" class="py-16 bg-white text-black">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-6">Contato</h3>
       <div class="max-w-xl mx-auto">
-        <form id="contactForm" action="https://formspree.io/f/xxxxx" method="POST" class="space-y-6 text-left">
+        <form id="contactForm" action="https://formspree.io/f/moqyolpd" method="POST" class="space-y-6 text-left">
           <div>
             <label for="email" class="block mb-1 font-semibold">Seu e-mail</label>
             <input type="email" name="email" id="email" required
@@ -257,7 +280,6 @@
             Enviar
           </button>
         </form>
-
         <div id="formStatus" class="mt-4 text-center font-semibold"></div>
       </div>
     </div>
@@ -292,44 +314,44 @@
     </div>
   </section>
 
-  <section id="uniformesSection" class="hidden bg-black text-white min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 gap-10">
-    <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+  <section id="uniformesSection"
+    class="hidden bg-black text-white min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 gap-10">
+    <div class="m-auto text-center md:text-left space-y-6">
       <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-wide relative inline-block">
         UNIFORMES
         <span class="block w-10 h-1 bg-yellow-400 mt-1 mx-auto md:mx-0"></span>
       </h2>
-  
+
       <div>
         <h3 class="text-xl md:text-3xl font-semibold">RECANTO DAS NOVIDADES</h3>
         <span class="block w-36 h-1 bg-yellow-400 my-2 mx-auto md:mx-0"></span>
         <p class="text-sm md:text-base">R. Jerônimo Busato Filho, 84 - Vila Tarumã, Pinhais - PR</p>
       </div>
-  
+
       <button onclick="goBack()" class="text-yellow-400 underline text-sm mt-4">
         Voltar
       </button>
     </div>
-  
+
     <div class="w-full md:w-1/2 flex justify-center">
       <img src="./src/images/uniforme.png" alt="Uniformes"
-           class="rounded-lg shadow-xl max-w-xs sm:max-w-sm md:max-w-md w-full h-auto object-contain" />
+        class="rounded-lg shadow-xl max-w-xs sm:max-w-sm md:max-w-md w-full h-auto object-contain" />
     </div>
   </section>
-  
 
   <footer class="bg-black text-white text-center py-4">
-    <p class="text-sm">&copy; 2025 Comphania de dança DF. Todos os direitos reservados.</p>
+    <p class="text-sm">&copy; 2025 Companhia de dança DF. Todos os direitos reservados.</p>
   </footer>
 </body>
 
 <script>
-  const toggle = document.getElementById("menuToggle");
-  const menu = document.getElementById("mobileMenu");
+  const mobileToggle = document.getElementById("mobileToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+  mobileToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 
   form.addEventListener('submit', async (e) => {
@@ -375,30 +397,115 @@
       showImage(currentIndex);
     }
 
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
     showImage(currentIndex);
-    setInterval(nextImage, 70000);
+    setInterval(nextImage, 15000);
   });
 
   function showUniformesSection() {
-  document.querySelectorAll("body > section").forEach(section => {
-    if (section.id !== "uniformesSection") {
-      section.style.display = "none";
+    document.querySelectorAll("body > section").forEach(section => {
+      if (section.id !== "uniformesSection") {
+        section.style.display = "none";
+      }
+    });
+
+    const uniformes = document.getElementById("uniformesSection");
+    if (uniformes) uniformes.classList.remove("hidden");
+  }
+
+  function goBack(targetId) {
+    const el = document.querySelector(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
     }
+
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    document.querySelectorAll("body > section").forEach(section => {
+      if (section.id !== "uniformesSection") {
+        section.style.display = "";
+      }
+    });
+
+    document.getElementById("uniformesSection").classList.add("hidden");
+  }
+
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const words = document.querySelectorAll(".word");
+
+    words.forEach(word => {
+      const letters = word.textContent.trim().split("");
+      word.textContent = "";
+      letters.forEach(letter => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.className = "letter";
+        word.appendChild(span);
+      });
+    });
+
+    let currentWordIndex = 0;
+    let maxWordIndex = words.length - 1;
+
+    words[currentWordIndex].style.opacity = "1";
+
+    function rotateText() {
+      const currentWord = words[currentWordIndex];
+      const nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+
+      Array.from(currentWord.children).forEach((letter, i) => {
+        setTimeout(() => {
+          letter.className = "letter out";
+        }, i * 80);
+      });
+
+      nextWord.style.opacity = "1";
+
+      Array.from(nextWord.children).forEach((letter, i) => {
+        letter.className = "letter behind";
+        setTimeout(() => {
+          letter.className = "letter in";
+        }, 340 + i * 80);
+      });
+
+      currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+    }
+
+    rotateText();
+    setInterval(rotateText, 4000);
+  });
+</script>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-x-10", "translate-y-8");
+        entry.target.classList.add("opacity-100", "translate-x-0", "translate-y-0");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
   });
 
-  const uniformes = document.getElementById("uniformesSection");
-  if (uniformes) uniformes.classList.remove("hidden");
-}
+  const introBox = document.getElementById("introBox");
+  const aboutBox = document.getElementById("aboutBox");
 
-function goBack() {
-  document.querySelectorAll("body > section").forEach(section => {
-    if (section.id !== "uniformesSection") {
-      section.style.display = "";
-    }
-  });
-
-  document.getElementById("uniformesSection").classList.add("hidden");
-}
+  if (introBox) observer.observe(introBox);
+  if (aboutBox) observer.observe(aboutBox);
 </script>
 
 </html>
