@@ -13,7 +13,7 @@
 
 <body class="bg-white text-black">
   <header class="relative font-sans">
-    <nav class="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50">
+    <nav class=" fixed  top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent bg-black bg-opacity-50">
       <div class="max-w-7xl mx-auto px-6 py-4 text-white flex justify-between items-center">
         <!-- Desktop Menu -->
         <ul class="hidden md:flex gap-6 uppercase text-sm font-semibold tracking-wide mx-auto">
@@ -62,8 +62,8 @@
 
       <img src="./src/imagesKet/logo.png" alt="Logo" class="h-48 sm:h-60 md:h-72 lg:h-96 object-contain logo" />
 
-      <a href="#contato" id="danceButton" style="font-family: 'Agrandir Grand Heavy'"
-        class="gradient text-2xl text-black font-bold px-6 py-3 rounded-full hover:from-orange-500 hover:to-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 flex items-center gap-3">
+      <a href="#contato" id="danceButton" style="font-family: sans-serif"
+        class="gradient text-2xl text-black font-bold px-6 py-3 rounded-full hover:from-orange-500 hover:to-yellow-300 transition duration-300 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 flex items-center gap-1">
         <img src="./src/images/dance.png" alt="dance" class="w-10 h-10" />
         Quero Dançar!
       </a>
@@ -173,10 +173,18 @@
 
   <section class="bg-black text-white py-16 px-4" id="aulas">
     <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-2 tracking-wider">AULAS</h2>
-      <p class="text-6xl font-black text-white relative inline-block mb-12">
-        Grade <span class="text-yellow-400 absolute text-2xl -bottom-3 left-1/2 -translate-x-1/2">2025</span>
-      </p>
+      <div class="relative mb-12 text-center">
+        <span class="absolute text-8xl inset-0 flex justify-center items-center text-[8rem] md:text-[10rem] font-black text-yellow-400 opacity-40 z-0 select-none pointer-events-none">
+          2025
+        </span>
+      
+        <div class="relative z-10">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-wider text-white">AULAS</h2>
+          <p class="text-3xl md:text-4xl font-black text-white">Grade</p>
+        </div>
+      </div>
+      
+      
 
       <div class="grid grid-cols-2 md:grid-cols-2 gap-10 text-left">
         <div>
