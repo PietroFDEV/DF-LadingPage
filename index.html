@@ -157,12 +157,14 @@
             <div class="w-full md:w-1/3 flex-shrink-0 p-4">
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-                <img src="./src/images/ket.png" alt="Ketherin"
+                <img src="./src/images/desi.png" alt="Desirre"
                   class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
-                <h4 class="text-xl font-semibold mb-2">Ketherin Goudel Favoreto</h4>
-                <p class="text-gray-700 text-sm">Conhecida como filha da Professora Desirre, é Social Media da
-                  companhia, formada pela Universidade Positivo. Está presente no mundo da dança há mais de 10 anos,
-                  especialmente nas danças urbanas. Participou de festivais como FIH2, HHI e Joinville.</p>
+                <h4 class="text-xl font-semibold mb-2">Desirre Goudel Favoreto</h4>
+                <p class="text-gray-700 text-sm">Dança há 31 anos, atua há 28 anos e, há 21 anos, é  coreógrafa e professora de dança. Atriz e 
+                  dançarina profissional criou uma metodologia própria dentro da proposta de desenvolvimento das habilidades e  qualidades 
+                  físicas associadas a dança e expressividade.
+                  Formada em Educação física pela UFPR  e pós- graduada em dança e educação física  pelo ISEPE. MBA em gestão de espetáculos e
+                   dança. Jurada oficial do Hip-hop Internacional Brasil (HHIB) há 6 anos. Diretora da Cia de Dança Desirre Favoreto em Pinhais.</p>
               </div>
             </div>
 
@@ -170,12 +172,12 @@
             <div class="w-full md:w-1/3 flex-shrink-0 p-4">
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-                <img src="./src/images/desi.png" alt="Desirre"
+                <img src="./src/images/ket.png" alt="Ketherin"
                   class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
-                <h4 class="text-xl font-semibold mb-2">Desirre Goudel Favoreto</h4>
-                <p class="text-gray-700 text-sm">Dança há 31 anos, atua há 28 e, há 21 anos, é coreógrafa e professora.
-                  Criadora de uma metodologia própria, formada em Educação Física (UFPR), pós-graduada em dança (ISEPE),
-                  MBA em gestão de espetáculos. Jurada oficial do HHIB e diretora da companhia em Pinhais.</p>
+                <h4 class="text-xl font-semibold mb-2">Ketherin Goudel Favoreto</h4>
+                <p class="text-gray-700 text-sm">Conhecida como filha da Professora Desirre, é Social Media da companhia, formada pela Universidade 
+                  Positivo. Também é presente no mundo da dança há mais de 10 anos, mais especificamente das danças urbanas. Participou de grandes 
+                  festivais como FIH2, HHI e Joinville.</p>
               </div>
             </div>
 
@@ -186,9 +188,10 @@
                 <img src="./src/images/luiz.png" alt="Luiz"
                   class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Luiz Hauth</h4>
-                <p class="text-gray-700 text-sm">Dança há 10 anos com foco em danças urbanas. Participou de grupos como
-                  Street Extreme, competiu em festivais como FIH2 e Joinville, e estudou fora com grandes nomes.
-                  Licenciado em Educação Física (Unibrasil), hoje integra o Epifania Dance Project de Guiga de Souza.
+                <p class="text-gray-700 text-sm">Dança há 10 anos estudando danças urbanas, já esteve em grupos como Street Extreme competindo em 
+                  festivais como FIH2 e Joinville, já viajou para fora para fazer cursos com grandes nomes das danças urbanas. Licenciado em 
+                  Educação física pelo Centro Universitário Unibrasil e atualmente faz parte do Epifania Dance Project, do renomado bailarino 
+                  Guiga de Souza.
                 </p>
               </div>
             </div>
@@ -586,17 +589,27 @@
   const equipeSlideWrapper = document.getElementById('equipeSlides');
   const equipeCards = equipeSlideWrapper.children.length;
 
+  function getCardsPerView() {
+    return window.innerWidth >= 768 ? 2 : 1;
+  }
+
   function moveEquipeSlide(direction) {
-    const cardsPerView = 3;
+    const cardsPerView = getCardsPerView();
     const maxIndex = Math.ceil(equipeCards / cardsPerView) - 1;
 
     equipeIndex += direction;
     if (equipeIndex < 0) equipeIndex = maxIndex;
     if (equipeIndex > maxIndex) equipeIndex = 0;
 
-    equipeSlideWrapper.style.transform = `translateX(-${equipeIndex * 100}%)`;
+    const shiftPercentage = (100 / cardsPerView) * equipeIndex;
+    equipeSlideWrapper.style.transform = `translateX(-${shiftPercentage}%)`;
   }
+
+  window.addEventListener("resize", () => {
+    moveEquipeSlide(0);
+  });
 </script>
+
 
 
 
