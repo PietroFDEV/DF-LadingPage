@@ -76,7 +76,7 @@
         class="flex flex-1 items-center justify-center opacity-0 translate-y-8 transition-all duration-700 ease-out w-full md:w-1/2">
         <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
 
-          <img src="./src/images/logo.jpg" alt="Logo" class="h-60 m-auto object-contain drop-shadow-xl rounded-2xl" />
+          <img src="./src/images/logo.jpg" alt="Logo" class="logo h-60 m-auto object-contain drop-shadow-xl rounded-2xl" />
 
           <p class="text-white/80 text-lg md:text-xl max-w-md text-center md:text-left"
             style="font-family: 'Agrandir Grand Heavy'">
@@ -158,7 +158,7 @@
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
                 <img src="./src/images/desi.png" alt="Desirre"
-                  class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+                  class="workers w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Desirre Goudel Favoreto</h4>
                 <p class="text-gray-700 text-sm">Dança há 31 anos, atua há 28 anos e, há 21 anos, é  coreógrafa e professora de dança. Atriz e 
                   dançarina profissional criou uma metodologia própria dentro da proposta de desenvolvimento das habilidades e  qualidades 
@@ -173,7 +173,7 @@
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
                 <img src="./src/images/ket.png" alt="Ketherin"
-                  class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+                  class="workers w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Ketherin Goudel Favoreto</h4>
                 <p class="text-gray-700 text-sm">Conhecida como filha da Professora Desirre, é Social Media da companhia, formada pela Universidade 
                   Positivo. Também é presente no mundo da dança há mais de 10 anos, mais especificamente das danças urbanas. Participou de grandes 
@@ -186,7 +186,7 @@
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
                 <img src="./src/images/luiz.png" alt="Luiz"
-                  class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+                  class="workers w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Luiz Hauth</h4>
                 <p class="text-gray-700 text-sm">Dança há 10 anos estudando danças urbanas, já esteve em grupos como Street Extreme competindo em 
                   festivais como FIH2 e Joinville, já viajou para fora para fazer cursos com grandes nomes das danças urbanas. Licenciado em 
@@ -201,7 +201,7 @@
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
                 <img src="./src/images/vanessa.jpg" alt="Luiz"
-                  class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+                  class="workers w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Vanessa Calegaro</h4>
                 <p class="text-gray-700 text-sm">Licenciada em Educação Física, ingressou no mundo da dança através do
                   Ballet Clássico e Dança do Ventre há 10 anos. Ao longo desses período estudou também Dança
@@ -216,7 +216,7 @@
               <div
                 class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
                 <img src="./src/images/pietro.png" alt="Luiz"
-                  class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
+                  class="workers w-32 h-32 object-cover rounded-full mb-4 border-4 border-yellow-300 shadow-md">
                 <h4 class="text-xl font-semibold mb-2">Pietro Favoreto</h4>
                 <p class="text-gray-700 text-sm">Desenvolvedor de Software apaixonado e experiente, com mais de 4 anos
                   de atuação prática na criação, desenvolvimento e implantação de sites e aplicações. Possui uma base
@@ -414,6 +414,47 @@
         class="rounded-lg shadow-xl max-w-xs sm:max-w-sm md:max-w-md w-full h-auto object-contain" />
     </div>
   </section>
+
+  <section id="pagamento" class="py-20 bg-white text-black">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Escolha Seu Plano</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Produto 1 -->
+        <div class="bg-yellow-100 p-6 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-2">Plano Básico</h3>
+          <p class="mb-4">Acesso a 1 aula por semana.</p>
+          <span class="text-2xl font-bold mb-4 block">R$49,90</span>
+          <form action="https://mpago.li/2FAzkyb" method="GET" target="_blank">
+            <input type="hidden" name="pref_id" value="SEU_ID_DE_PREFERENCIA" />
+            <button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition duration-300">Assinar</button>
+          </form>
+        </div>
+  
+        <!-- Produto 2 -->
+        <div class="bg-yellow-100 p-6 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-2">Plano Intermediário</h3>
+          <p class="mb-4">Acesso a 2 aulas por semana.</p>
+          <span class="text-2xl font-bold mb-4 block">R$79,90</span>
+          <form action="https://www.mercadopago.com.br/checkout/v1/redirect" method="GET" target="_blank">
+            <input type="hidden" name="pref_id" value="SEU_ID_DE_PREFERENCIA" />
+            <button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition duration-300">Assinar</button>
+          </form>
+        </div>
+  
+        <!-- Produto 3 -->
+        <div class="bg-yellow-100 p-6 rounded-xl shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-2">Plano Premium</h3>
+          <p class="mb-4">Acesso ilimitado às aulas.</p>
+          <span class="text-2xl font-bold mb-4 block">R$119,90</span>
+          <form action="https://www.mercadopago.com.br/checkout/v1/redirect" method="GET" target="_blank">
+            <input type="hidden" name="pref_id" value="SEU_ID_DE_PREFERENCIA" />
+            <button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition duration-300">Assinar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <footer class="bg-black text-white text-center py-4">
     <p class="text-sm">&copy; 2025 Companhia de dança DF. Todos os direitos reservados.</p>
